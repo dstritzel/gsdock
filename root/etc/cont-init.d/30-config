@@ -1,6 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 PATH_SETTINGS="${DIRECTORY_CONFIG}/settings.tix"
+exit
 
 # Copy SSL certs from tar
 [ -f ${PATH_SETTINGS} ] && echo "${ECHO_PREFIX} -> ${DIRECTORY_CONFIG}/gs-server.crt already exists, not copying" || cp /usr/bin/gs-server.crt "${DIRECTORY_CONFIG}/gs-server.crt"
