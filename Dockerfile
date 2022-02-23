@@ -3,7 +3,7 @@ LABEL maintainer "shrmnk <shrmnk@users.noreply.github.com>"
 
 # Exit container if we cannot assume UID/GID
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2 \
-DIRECTORY_CONFIG="/config" \
+DIRECTORY_CONFIG="/root/.goodsync" \
 DIRECTORY_DATA="/data" \
 GS_SERVER_USER=abc \
 ECHO_PREFIX="[gsdock]"
@@ -37,4 +37,4 @@ EXPOSE 33339/udp
 # Map /data to host-defined path for backup storage
 VOLUME /data
 # Map /config to host-defined config storage folder
-VOLUME /config
+VOLUME /root/.goodsync
